@@ -6,11 +6,12 @@ using TMPro;
 public class RoundsManager : MonoBehaviour
 {
    // public int maxRounds = 10;  // max rounds
-    private int currentRound = 1;  // actual round
+    private int currentRound = 1;  // current round
     private int monsterCount = 0;  // Counts monsters that have arrived to the border of the screen
     private int fibonacciValue = 1; // fibonacci value
     public static RoundsManager instance; //Rounds manager is a global instance
     public TMP_Text numberOfMonsters;
+    public TMP_Text roundNumber;
 
     private void Awake()
     {
@@ -52,8 +53,10 @@ public class RoundsManager : MonoBehaviour
         Timer.instance.Restart();
         // Instantiate monsters without loops
         InstantiateMonsters(fibonacciValue, 0);
+        if (roundNumber != null)
+            roundNumber.text = currentRound.ToString();
         // Increases round number 
-        currentRound++;
+        currentRound++;  
     }
 
     //Recursive function that is responsible for instantiating monsters
