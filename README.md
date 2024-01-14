@@ -5,12 +5,19 @@ The game is a "Monster run game" structured in rounds. In each round, the number
 The Fibonacci sequence is a mathematical series where each number is the sum of the two preceding ones ( 0, 1, 1, 2, 3, 5, 8, ...).
 
 round 1 -> 1 monster
+
 round 2 -> 1 monster
+
 round 3 -> 2 monsters
+
 round 4 -> 3 monsters
+
 round 5 -> 5 monsters
+
 round 6 -> 8 monsters
+
 round 7 -> 13 monsters
+
 ...
 
 The generated monsters have randomized speeds, but all move in the same direction. Once all monsters have left the screen, the round ends, and there is a brief interval before the next round begins.
@@ -22,3 +29,6 @@ The UI includes the display of the total number of monsters created, the number 
 The game is designed to be responsive, adapting appropriately to different screen sizes.
 
 I use Unity Test Framework to add Unit tests.
+
+
+![Video](Images/VideoMonsterRunGame.gif)
